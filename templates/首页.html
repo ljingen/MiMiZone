@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>约闲</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone = no"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+
+
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+
+<body>
+<header class="head-black">
+    <div class="top"></div>
+    <div class="title">
+        <div class="container-fluid">
+            <a class="a-address" href="#"><i class="glyphicon glyphicon-map-marker"></i>北京市</a>
+            <a class="a-right" href="#"><i class="fa fa-share-square-o"></i></a>
+            <h4>发布服务</h4>
+
+        </div>
+    </div>
+</header>
+<main>
+
+    <div class="beauty-search">
+        <div class="screening title-screen">
+            <ul>
+                <li class="Regional"><span>全部服务</span><i class="fa fa-caret-down"></i></li>
+                <li class="Sort"><span>智能排序</span><i class="fa fa-caret-down"></i></li>
+                <li class="meishi"><span>筛选</span><i class="fa fa-caret-down"></i></li>
+            </ul>
+        </div>
+        <!--全部服务-->
+        <div class="grade-eject">
+            <ul class="grade-w" id="gradew">
+                <li onclick="grade1(this)">生活服务</li>
+                <li onclick="grade1(this)">专业技能</li>
+            </ul>
+            <ul class="grade-t" id="gradet">
+                <li onclick="gradet(this)">全部</li>
+                <li onclick="gradet(this)">结伴同游</li>
+                <li onclick="gradet(this)">喝茶聊天</li>
+                <li onclick="gradet(this)">运动陪跑</li>
+                <li onclick="gradet(this)">约饭</li>
+                <li onclick="gradet(this)">看电影</li>
+                <li onclick="gradet(this)">颜值撑场</li>
+            </ul>
+        </div>
+
+        <!-- 智能工作-->
+        <div class="Sort-eject Sort-height">
+            <ul class="Sort-Sort" id="Sort-Sort">
+                <li onclick="Sorts(this)">按照人气</li>
+                <li onclick="Sorts(this)">按照距离</li>
+                <li onclick="Sorts(this)">按照好评</li>
+                <li onclick="Sorts(this)">低价优先</li>
+                <li onclick="Sorts(this)">高价优先</li>
+            </ul>
+        </div>
+
+        <!-- 筛选 -->
+        <div class="meishi22">
+            <ul class="meishia-w" id="meishia">
+                <li onclick="meishia(this)">性别</li>
+                <li onclick="meishia(this)">年龄</li>
+            </ul>
+            <ul class="meishia-t" id="meishib">
+                <li onclick="meishib(this)"><a href="#">全部</a> </li>
+                <li onclick="meishib(this)"><a href="#">18-21</a></li>
+                <li onclick="meishib(this)"><a href="#">22-24</a> </li>
+                <li onclick="meishib(this)"><a href="#">25-27</a></li>
+                <li onclick="meishib(this)"><a href="#">28-30</a></li>
+                <li onclick="meishib(this)"><a href="#">30以上</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="img-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6">
+                            <a href="#">
+                                <img src="../images/index/banner-1.png" />
+                                <span>小乔<i class="fa fa-female"></i></span>
+                                <p><span class="col-xs-7">心里咨询</span><span class="pull-right">￥200元</span></p>
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#">
+                                <img src="../images/index/banner-1.png" />
+                                <span>小乔<i class="fa fa-female"></i></span>
+                                <p><span class="col-xs-7">心里咨询</span><span class="pull-right">￥200元</span></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6">
+                            <a href="#">
+                                <img src="../images/index/banner-1.png" />
+                                <span>小乔<i class="fa fa-female"></i></span>
+                                <p><span class="col-xs-7">心里咨询</span><span class="pull-right">￥200元</span></p>
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#">
+                                <img src="../images/index/banner-1.png" />
+                                <span>小乔<i class="fa fa-female"></i></span>
+                                <p><span class="col-xs-7">心里咨询</span><span class="pull-right">￥200元</span></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<footer>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item" href="#tabbar">
+            <span class="fa  fa-reddit"></span>
+            <span class="mui-tab-label">服务</span>
+        </a>
+
+        <a class="mui-tab-item  mui-active" href="#tabbar-with-contact">
+            <span class="mui-icon mui-icon-loop"></span>
+            <span class="mui-tab-label">动态</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-chat">
+            <span class="mui-icon mui-icon-chat"></span>
+            <span class="mui-tab-label">消息</span>
+        </a>
+
+        <a class="mui-tab-item" href="#tabbar-with-map">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+</footer>
+</body>
+
+</html>

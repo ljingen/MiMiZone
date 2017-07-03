@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>忘记密码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone = no"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+<header>
+    <div class="top"></div>
+    <div class="title">
+        <div class="container-fluid">
+            <a href="#"><i class="fa fa-angle-left"></i></a>
+            <h4>忘记密码</h4>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="login forget-key">
+        <div class="container-fluid">
+            <div class="mui-input-row">
+                <i class="fa fa-mobile-phone"></i>
+                <input type="text" class="mui-input-clear" placeholder="请输入手机号">
+            </div>
+            <div class="mui-input-row mui-input-row-send">
+                <i class="fa fa-envelope-o"></i>
+                <input type="text" class="mui-input-clear" placeholder="手机验证码">
+                <input type="button" id="btn" value="发送" />
+            </div>
+            <div class="mui-input-row">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="mui-input-password" placeholder="请输入您的新密码">
+            </div>
+            <div class="mui-input-row">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="mui-input-password" placeholder="请再次输入您的新密码">
+            </div>
+            <a class="btn-login" href="#">提交</a>
+        </div>
+
+    </div>
+</main>
+
+<script type="text/javascript">
+    var wait=60;
+    function time(o) {
+        if (wait == 0) {
+            o.removeAttribute("disabled");
+            o.value="发送";
+            wait = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            o.value="重新发送(" + wait + ")";
+            wait--;
+            setTimeout(function() {
+                        time(o)
+                    },
+                    1000)
+        }
+    }
+    document.getElementById("btn").onclick=function(){time(this);}
+</script>
+</body>
+</html>
